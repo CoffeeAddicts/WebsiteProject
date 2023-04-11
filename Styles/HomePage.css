@@ -1,0 +1,75 @@
+div {
+  border: #030815;
+  border-width: 1px;
+  border-collapse: collapse;
+  border-style: solid;
+  margin: 0.5%;
+}
+.Navigation-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #030815;
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #010A21;
+}
+
+.Navigation-li {
+  float: left;
+}
+
+.Navigation-li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+.Navigation-li a:hover {
+  background-color: grey;
+}
+
+.testimony{
+    text-align:center;
+    width:24%;
+    float: left;
+    height:300px;
+    margin: 0.4%;
+}
+.Main{
+    width:99%;
+    height:310px;
+
+}
+
+.Card:after{
+  background: linear-gradient(
+    transparent,
+    mediumslateblue,
+    transparent
+  );
+  height:70px;
+  width:1px;
+  position: absolute;
+  left:-1px;
+  top: 65%;
+  opacity:0;
+  content: "";
+  transition: top 600ms ease, opacity 600ms ease;
+}
+
+.Card:hover:after {
+  top:25%;
+  opacity:1;
+}
+
+.Card{
+  position: relative;
+  
+}
