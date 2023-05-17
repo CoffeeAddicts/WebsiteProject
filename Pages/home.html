@@ -6,77 +6,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- <style src = "HomePage.css"></style> -->
-    <link rel="stylesheet" href="../Styles/HomePage.css">
-    <script src="https://kit.fontawesome.com/a726097c37.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Styles/HomePage.css" />
+    <script
+      src="https://kit.fontawesome.com/a726097c37.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav class="Navigation">
-    <ul class="Navigation-ul">
-      <div style="float:left">
-        <li class="Navigation-li"><a class="active" href="index.html">Home</a></li>
-      </div>
-      <div style="float: right">
-        <li class="Navigation-li"><a href="Pages/support.html">Support</a></li>
-        <li class="Navigation-li"><a href="Pages/partners.html">Partners</a></li>
-        <li class="Navigation-li"><a href="Pages/aboutus.hmtl">About us</a></li>
-        <li class="Navigation-li"><a href="Pages/products.html">Products</a></li>
-      </div>
-    </ul>
+    <nav class="Navigation" style="position: sticky;width:100%;top:0px;z-index: 3;">
+      <ul class="Navigation-ul">
+        <div style="float: left">
+          <li class="Navigation-li">
+            <a class="active" href="home.html">
+              <img
+                class="Logo"
+                style="width: 100%; margin-top: -10px"
+                src="../Images/GHA.png"
+              />
+            </a>
+          </li>
+        </div>
+        <div style="float: right">
+          <li class="Navigation-li">
+            <a href="support.html">Support</a>
+          </li>
+          <li class="Navigation-li">
+            <a href="partners.html">Partners</a>
+          </li>
+          <li class="Navigation-li">
+            <a href="aboutus.html">About us</a>
+          </li>
+          <li class="Navigation-li">
+            <a href="products.html">Products</a>
+          </li>
+        </div>
+      </ul>
     </nav>
 
-    <div>
-      <div class = "Main">
-        <!-- Description of company -->
-        <div class = "Card" style="float:left;width: 49%;margin:5px;height:300px">Desription<br>of company</div>
-        <!-- Picture -->
-        <div class = "Card"style="float: right;width: 49%;margin:5px;height:300px">Photo placed here</div>
-      </div>
-      
-      <div class="Main" >
-        <header class = "Card" style="width:100%;text-align: center;">Header</header>
-        <p class = "Card" style="width:100%;height:300px;text-align: center;">What company offers </p>
-      </div>
-
+    <div style="width: 100%">
       <div class="Main">
-        <div class = "Card" style="float: left;width: 49%;margin:5px;height:300px"> Photo placed here</div>
-        <div class = "Card"style="float: right;width: 49%;margin:5px;height:300px">
-        <ul>
-          <li>Product1</li>
-          <ul>
-            <li>Explanation</li>
-          </ul>
-          <li>Product2</li>
-          <ul>
-            <li>Explanation</li>
-          </ul>
-          <li>Product3</li>
-          <ul>
-            <li>Explanation</li>
-          </ul>
-          <li>Product4</li>
-          <ul>
-            <li>Explanation</li>
-          </ul>
-        </ul>
-        
+        <!-- Description of company -->
+        <div class="Card" style="float: left">
+          <div class="card-content">
+            <i
+              class="fa-solid fa-wand-magic-sparkles"
+              style="color: #7b68ee"
+            ></i>
+            <h1>GHA Solutions</h1>
+            <p>
+              Empowering companies to realise their full potential through
+              innovative use of information and communication technologies
+            </p>
+          </div>
+        </div>
+        <!-- Picture -->
+        <div class="Card" style="float: right">
+          <img class="image" src="../Images/HomePageImage1.jpg" />
         </div>
       </div>
 
       <div class="Main">
-        <div class="testimony">1</div>
-        <div class="testimony">2</div>
-        <div class="testimony">3</div>
-        <div class="testimony">4</div>
+        <div class="Card" style="width: 100%">
+          <div class="card-content">
+            <i class="fa-solid fa-question" style="color: #7b68ee"></i>
+            <h1>How can GHA Solutions help you</h1>
+            <p>
+              GHA Solutions is an official Epicor Partner that was created due
+              to the ever-growing demands of the manufacturing industry and
+              their software needs. At GHA Solutions, we provide, consult on and
+              enhance the Enterprise Resource Planning (ERP) solutions in your
+              business. The GHA Solutions team have extensive and in depth
+              knowledge of the Epicor ERP 9, E10 and now the latest 10.2
+              solutions. We offer a wide range of comprehensive services that
+              can be found below.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="Main" style="height: 400px">
+        <div class="Card" style="float: left; height: 100%">
+          <img
+            class="image"
+            style="height: 100%"
+            src="../Images/TeamPicture.jpg"
+          />
+        </div>
+        <div class="Card" style="float: right; height: 400px">
+          <div class="card-content" style="color: white">
+            <i class="fa-solid fa-cart-shopping" style="color: #7b68ee"></i>
+            <h1>Products</h1>
+            <ul>
+              <h3>Mobile Field Service</h3>
+              <li>Allows for users to easily and efficiently log information about field service jobs</li>
+              <li>Stores information about technitions safely and effectively</li>
+              <br>
+              <h3>Mobile Inventory Management Solution</h3>
+              <li>Allows for easy manipulation of stock through the use of a mobile phone</li>
+              <li>Creates an easy access point for scanning and sending packages</li>
+              <br>
+              <h3>Proof of Delivery</h3>
+              <li>Helps to easily allow delivery drivers to show that a package has been delivered</li>
+              <li>Allows the reciever to sign for their packages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="Main">
+        <div
+          class="Card"
+          style="width: 24%; height: 400px; float: left; margin: 0.5%;background-color: #282828;"
+          id="test1"
+        >
+          <div class="card-content">
+            <i class="fa-solid fa-pen-nib" style="color: #7b68ee"></i>
+            <h1>Euramax Solutions</h1>
+            <p>
+              GHA’s Simple Stock Take module provided the business with the
+              necessary requirements to continue with existing processes to
+              maintain stock accuracy from implementation. The solution was easy
+              to setup and implement, whilst providing great flexibility for any
+              future changes that may occur.
+            </p>
+          </div>
+        </div>
+        <div
+          class="Card"
+          style="width: 24%; height: 400px; float: left; margin: 0.5%"
+          id="test"
+        >
+          <div class="card-content">
+            <i class="fa-solid fa-pen-nib" style="color: #7b68ee"></i>
+            <h1>Optima</h1>
+            <p>
+              GHA’s stock take module is the logical choice for controlling our
+              stock, it is simple to set up, easy to use and delivers great
+              KPI’s straight out of the box.
+            </p>
+          </div>
+        </div>
+        <div
+          class="Card"
+          style="width: 24%; height: 400px; float: left; margin: 0.5%;background-color: #282828;"
+          id="test3"
+        >
+          <div class="card-content">
+            <i class="fa-solid fa-pen-nib" style="color: #7b68ee"></i>
+            <h1>Alberta</h1>
+            <p>
+              I have known Andy during the deployment of EPICOR ERP 10 within
+              our organisation. His attention to customer requirements, “can do”
+              attitude and in depth knowledge of the software earned him the
+              respect of many within the company. I would recommend him to
+              anyone deploying EPICOR ERP without reservations.
+            </p>
+          </div>
+        </div>
+        <div
+          class="Card"
+          style="width: 24%; height: 400px; float: left; margin: 0.5%"
+          id="test4"
+        >
+          <div class="card-content">
+            <i class="fa-solid fa-pen-nib" style="color: #7b68ee"></i>
+            <h1>First Choice Catering Spares</h1>
+            <p>
+              We wanted to refresh our documents and spent a fair amount of time
+              designing new ones, as we were runing multiple projects we decided
+              to outsource to GHA. Having known Andy Wilson previously and
+              having met the GHA team, I knew they could deliver what we wanted.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
-  <footer>
-    <div class="Main" style="height:110px">
-      <div style="width:24%;height:100px;margin: 5px;float:left;">Contact information</div>
-      <div style="width:49%;height:100px;margin: 5px;float:left;">Terms&conditions</div>
-      <div style="width:24%;height:100px;margin: 5px;float:left;">Social Media Links<i class="fa-brands fa-twitter"><i class="fa-brands fa-tiktok"></i></i></div>
-
-
+  <footer style="margin-top:50px;">
+    <div style="height: 110px">
+      <div class="FooterItem">
+        <img class="Logo" src="../Images/GHA.png" />
+      </div>
+      <div class="FooterItem" style="width: 49%">
+        To find out how your business can benefit from our ERP Solutions, <br>simply
+        contact one of our specialists today on:
+        <strong> +44 (0) 1908 465 670 </strong>
+      </div>
+      <div class="FooterItem">
+        Follow us:<br />
+        <a
+          href="https://twitter.com/ghasolutions?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3AGHASolutions%7Ctwcon%5Es2"
+        >
+          <i class="fa-brands fa-twitter"> </i>
+        </a>
+        <br />
+        <i class="fa-brands fa-tiktok"></i>
+      </div>
     </div>
   </footer>
 </html>

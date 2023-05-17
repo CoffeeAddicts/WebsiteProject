@@ -1,67 +1,169 @@
-div {
-  border: #030815;
-  border-width: 1px;
-  border-collapse: collapse;
-  border-style: solid;
-  margin: 0.5%;
+:root {
+  --primary-color: mediumslateblue;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+header{
+  width:100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size:x-large;
+  font-weight: bold;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;   
+  margin-top: auto;}
+
+h1, h2, h3, p {
+  margin: 0rem;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  margin: 0rem;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+
+.Card  > .image {
+  width: 100%;
+  height:300px;
+  aspect-ratio: 650/300;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.Logo{
+  width: 40%;
+  /* height:100%; */
+  /* aspect-ratio: 300/300; */
+  border-radius: 1.5rem;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+/* Navigation Classes */
+
 .Navigation-ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #030815;
-}
-body {
-  font-family: sans-serif;
-  font-size: 16px;
-  color: white;
-  background-color: #010A21;
+  background-color: black;
 }
 
 .Navigation-li {
   float: left;
+  max-width: 120px;
+  max-height: 50px;
 }
 
 .Navigation-li a {
-  display: block;
+  float: left;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
   color: white;
+}
+
+.Navigation-li a.active{
+  background-color: black;
+  border-width: 1px;
+  border:var(--primary-color);
+  border-style:solid;
+  max-width: 120px;
+  max-height: 50px;
 }
 
 .Navigation-li a:hover {
   background-color: grey;
 }
 
+
+
 .testimony{
-    text-align:center;
-    width:24%;
-    float: left;
-    height:300px;
-    margin: 0.4%;
+  text-align:center;
+  width:24%;
+  float: left;
+  height:300px;
+  margin: 0.4%;
+  background-color: #ffffff;
+  border-radius: 15px;
 }
 .Main{
-    width:99%;
-    height:310px;
-
+  width:99%;
+  height:310px;
 }
 
+.Footer{
+  width:100%;
+  height:310px;
+  background-color: black;
+  color:white;
+}
+
+.FooterItem{
+  background-color: black;
+  color:#ffffff;
+  width: 24%;
+  height: 100px;
+  margin: 5px;
+  float: left;
+}
+
+.ImageDiv{
+  float: left;
+  height: 39%;
+  width: 35%;
+  vertical-align: middle;
+  margin: 20px;
+  margin-top:175px;
+}
+
+.ImageSide{
+  width: 100%;
+  height: 70%;
+  aspect-ratio: 650/300;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+
+
+
+
+/*Card classes*/
+
 .Card:after{
+  content: "";
+  height: 70px;
+  width: 1px;  
+  position: absolute;  
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
   background: linear-gradient(
     transparent,
-    mediumslateblue,
+    var(--primary-color),
     transparent
   );
-  height:70px;
-  width:1px;
-  position: absolute;
-  left:-1px;
-  top: 65%;
-  opacity:0;
-  content: "";
-  transition: top 600ms ease, opacity 600ms ease;
+  opacity: 0;
 }
 
 .Card:hover:after {
@@ -70,6 +172,168 @@ body {
 }
 
 .Card{
+  width: 49%;
+  height:300px;
   position: relative;
-  
+  background-color: rgb(16 16 16);
+  border: 1px solid rgb(255 255 255 / 5%);
+  border-radius: 1.5rem;
 }
+
+.card-content {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1px, 
+    transparent 1px
+  );
+  background-position: 50% 50%;
+  background-size: 1.1rem 1.1rem;
+  padding: 4rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card-content > :is(h1, h3, p) {
+  text-align: center;
+}
+
+.card-content > h1 {
+  color: rgb(250 249 246); 
+  font-size: 2.6rem;
+}
+
+.card-content > h3 {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 0.76rem;
+}
+
+.card-content > p {
+  color: rgb(255 255 255 / 75%);
+  line-height: 1.5rem;
+}
+
+.ProductList {
+  color: rgb(255 255 255 / 75%);
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.card-content >ul> li {
+  margin-left:50px;
+}
+
+@media(max-width: 700px) {
+  .card {
+    width: calc(100% - 2rem);
+    margin: 0rem 1rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
+  }
+}
+
+@media(max-width: 600px) {
+  .card-content {
+    padding: 3rem;
+  }
+  
+  .card-content > h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.Card h1 {
+  animation: fadeInHeader 5s;
+  position: absolute;
+  top:30px;
+  opacity:1;
+}
+
+
+.Card p {
+  position: absolute;
+  top:130px;
+  animation: fadeInText 5s;
+}
+
+.Card i {
+  position: absolute;
+  top:20px;
+  animation:fadeInLogo 5s;
+}
+
+@keyframes fadeInHeader {
+  0% { opacity: 0; }
+  0% { top :250px;}
+  100% { opacity: 1; }
+  100% { top :30px;}
+}
+
+
+@keyframes fadeInText {
+  0% { opacity: 0; }
+  0% { top :250px;}
+  100% { opacity: 1; }
+  100% { top :130px;}
+}
+
+@keyframes fadeInLogo {
+  0% { opacity: 0; }
+  0% { top :250px;}
+  100% { opacity: 1; }
+  100% { top :20px;}
+}
+
+
+
+
+.LongCard:after{
+  content: "";
+  height: 70px;
+  width: 1px;  
+  position: absolute;  
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(
+    transparent,
+    var(--primary-color),
+    transparent
+  );
+  opacity: 0;
+}
+
+.LongCard:hover:after {
+  top:25%;
+  opacity:1;
+}
+
+.LongCard{
+  width: 100%;
+  height:300px;
+  position: relative;
+  background-color: rgb(16 16 16);
+  border: 1px solid rgb(255 255 255 / 5%);
+  border-radius: 1.5rem;
+}
+
+.LongCard h1 {
+  animation: fadeInHeader 5s;
+  position: absolute;
+  top:20%;
+  opacity:1;
+}
+
+
+.LongCard p {
+  position: absolute;
+  top:40%;
+  animation: fadeInText 5s;
+}
+
